@@ -31,7 +31,8 @@ jobs:
           command: |
             ls
             #pytest -s -v --ignore=./tests/test_mobile_bitcoin_price.py /tests/test_api_example.py --junitxml=test-reports/junit.xml --tb=native 
-            pytest -s -v tests/test_example_form.py --junitxml=test-reports/junit.xml --tb=native 
+            #pytest -s -v tests/test_example_form.py --junitxml=test-reports/junit.xml --tb=native
+            python tests/test_example_form.py
       - store_artifacts:
           path: ./screenshots
           destination: screenshots-file
